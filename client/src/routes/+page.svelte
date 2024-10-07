@@ -3,7 +3,7 @@
 
     const query = createQuery({
         queryKey: ['hello'],
-        queryFn: async () => ((await fetch('http://localhost:5000/hello')).json()),
+        queryFn: async () => ((await fetch(`${import.meta.env.VITE_SERVER_URL}/hello`)).json()),
     })
 
 </script>
